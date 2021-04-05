@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<!-- <style>
+/* body {
+        /* background: rgb(2, 0, 36);
+        background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(9, 113, 121, 1) 92%, rgba(0, 212, 255, 1) 100%); */
+    /* background: rgb(3, 134, 144);
+        bac>kground: linear-gradient(266deg, rgba(3, 134, 144, 1) 4%, rgba(9, 1, 152, 1) 62%, rgba(1, 106, 128, 1) 100%); */
+    /* background: rgb(3, 134, 144);
+        background: linear-gradient(266deg, rgba(3, 134, 144, 1) 0%, rgba(105, 201, 221, 1) 52%, rgba(21, 14, 122, 1) 100%); */
+    
+    background: rgb(3, 134, 144);
+    background: radial-gradient(circle, rgba(3, 134, 144, 1) 0%, rgba(105, 201, 221, 1) 52%, rgba(67, 61, 143, 1) 100%);
+}
+*/
+</style> -->
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title></title>
+</head>
+
+<body>
+    <!-- Logolar -->
+    <div style="overflow: hidden; display: flex; justify-content:space-between;margin-top:20px;margin-left: 20px;margin-right:100px;">
+        <div>
+            <img src="cenglogo.png" alt="Cumhuriyet Üniversitesi Bilgisayar Mühendisliği Bölüm Logosu" />
+        </div>
+        <h1 style="padding-right: 200px;">Sivas Cumhuriyet Üniversitesi Öğrenci Ders Anketi</h1>
+        <div>
+            <img src="culogo.png" alt="Cumhuriyet Üniversitesi Logosu" />
+        </div>
+    </div>
+
+    <form action="" method="post">
+        <div style="width: max-content; height:max-content; margin-left:150px; margin-top: 20px;">
+            <!-- üst tablonun codları -->
+            <div id="top_table">
+                <table>
+                    <tr>
+                        <th style="width: 90px;">
+                            Adı Soyadı
+                        </th>
+                        <th>
+                            <input type="text" name="user_name" id="user_name" placeholder="Lütfen isim soy isim giriniz..!">
+                        </th>
+
+                        <th style="width:75px;">
+                            TC Kimlik Numarası
+                        </th>
+                        <th>
+                            <input type="text" name="user_tc" id="user_tc" placeholder="Lütfen Tc Numarası giriniz">
+                        </th>
+
+                        <th style="width:40px;">
+                            Tarih
+                        </th>
+                        <th>
+                            <input type="datetime-local" name="selected_datetime" id="selected_datetime">
+                        </th>
+
+                        <th>
+                            Tablo Numarası
+                        </th>
+                        <th>
+                            <input type="text" name="user_table_number" id="user_table_number">
+                        </th>
+
+                    </tr>
+                </table>
+            </div>
+
+            <!-- alt tablonun kodları -->
+            <div id="bottom_table">
+                <table>
+                    <!-- table headers-->
+                    <tr>
+                        <th>Geçen Hafta Zarfında</th>
+                        <th>Hiç</th>
+                        <th>Biraz</th>
+                        <th>Oldukça</th>
+                        <th>Çok</th>
+                    </tr>
+                    <!-- 1. row -->
+                    <tr>
+                        <td>1) Ne kadar ders çalıştınız ?</td>
+                        <td>
+                            <input type="radio" value="1" name="row_one" id="selected_nothing_row_one">1
+                        </td>
+                        <td>
+                            <input type="radio" value="2" name="row_one" id="selected_some_row_one">2
+                        </td>
+                        <td>
+                            <input type="radio" value="3" name="row_one" id="selected_quite_row_one">3
+                        </td>
+                        <td>
+                            <input type="radio" value="4" name="row_one" id="selected_very_row_one">4
+                        </td>
+                    </tr>
+
+                    <!-- 2. row Veritabanı Tasarım ve Uygulama -->
+                    <!-- question 1 -->
+                    <tr>
+                        <td>2.1) Veritabanı Tasarım ve Uygulama dersine ne kadar çalıştınız ?</td>
+                        <td>
+                            <input type="radio" value="1" name="vtu_row_two_q_one" id="nothing_vtu_row_two_q_one">1
+                        </td>
+                        <td>
+                            <input type="radio" value="2" name="vtu_row_two_q_one" id="some_vtu_row_two_q_one">2
+                        </td>
+                        <td>
+                            <input type="radio" value="3" name="vtu_row_two_q_one" id="quite_vtu_row_two_q_one">3
+                        </td>
+                        <td>
+                            <input type="radio" value="4" name="vtu_row_two_q_one" id="very_vtu_row_two_q_one">4
+                        </td>
+                    </tr>
+                    <!-- question 2 -->
+                    <tr>
+                        <td>
+                            2.2) Veritabanı Tasarım ve Uygulama dersinin vize sınavı nasıl geçti ?
+                            <br>
+                            <div style="margin:10px;">
+                                <input type="text" id="vtu_lesson_value_q_two">
+                            </div>
+                        </td>
+                        <td>
+                            <input type="radio" value="1" name="vtu_row_two_q_two" id="nothing_vtu_row_two_q_two">1
+                        </td>
+                        <td>
+                            <input type="radio" value="2" name="q_row_two_q_two" id="some_vtu_row_two_q_two">2
+                        </td>
+                        <td>
+                            <input type="radio" value="3" name="q_row_two_q_two" id="quite_vtu_row_two_q_two">3
+                        </td>
+                        <td>
+                            <input type="radio" value="4" name="q_row_two_q_two" id="very_vtu_row_two_q_two">4
+                        </td>
+                    </tr>
+                    <!-- question 3 -->
+                    <tr>
+                        <td>
+                            2) Veritabanı Tasarım ve Uygulama dersinden geçtiniz mi ?
+                        </td>
+
+                        <td colspan="2" style="padding-left: 85px;">
+                            <input type="radio" name="q_row_three" id="yes_vtu_row_two_q_three">Evet
+                        </td>
+
+                        <td colspan="2" style="padding-left: 85px;">
+                            <input type="radio" name="q_row_three" id="no_vtu_row_two_q_three">Hayır
+                        </td>
+                    </tr>
+                    <!-- question 4 -->
+                    <tr>
+                        <td>3) Evet ise , ders tekrarının faydası ne kadar oldu ?</td>
+                        <td>
+                            <input type="radio" name="row_three" id="nothing_vtu_row_two_q_four">1
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="some_vtu_row_two_q_four">2
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="quite_vtu_row_two_q_four">3
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="very_vtu_row_two_q_four">4
+                        </td>
+                    </tr>
+
+
+                    <!-- 3. row Yazılım Mühendisliği -->
+                    <!-- question 1 -->
+                    <tr>
+                        <td>2) Yazılım Mühendisliği dersine ne kadar çalıştınız ?</td>
+                        <td>
+                            <input type="radio" name="q_row_three" id="nothing_ym_row_three_q_one">1
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="some_ym_row_three_q_one">2
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="quite_ym_row_three_q_one">3
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="very_ym_row_three_q_one">4
+                        </td>
+                    </tr>
+                    <!-- question 2 -->
+                    <tr>
+                        <td>
+                            2) Yazılım Mühendisliği dersinin vize sınavı nasıl geçti ?
+                            <br>
+                            <div style="margin:10px;">
+                                <input type="text" id="ym_lesson_value_q_two">
+                            </div>
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="nothing_ym_row_three_q_two">1
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_some_q_row_two">2
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_quite_q_row_two">3
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_very_q_row_two">4
+                        </td>
+                    </tr>
+                    <!-- question 3 -->
+                    <tr>
+                        <td>
+                            2) Yazılım Mühendisliği dersinden geçtiniz mi ?
+                        </td>
+
+                        <td colspan="2" style="padding-left: 85px;">
+                            <input type="radio" name="q_row_three" id="selected_nothing_q_row_three">Evet
+                        </td>
+
+                        <td colspan="2" style="padding-left: 85px;">
+                            <input type="radio" name="q_row_three" id="selected_some_q_row_three">Hayır
+                        </td>
+                    </tr>
+                    <!-- question 4 -->
+                    <tr>
+                        <td>3) Evet ise , ders tekrarının faydası ne kadar oldu ? ?</td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_nothing_row_three">1
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_some_row_three">2
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_quite_row_three">3
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_very_row_three">4
+                        </td>
+                    </tr>
+
+
+                    <!-- 4. row Sinyaller ve Sistemler -->
+                    <!-- question 1 -->
+                    <tr>
+                        <td>2) Sinyaller ve Sistemler dersine ne kadar çalıştınız ?</td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_nothing_q_row_two">1
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_some_q_row_two">2
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_quite_q_row_two">3
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_very_q_row_two">4
+                        </td>
+                    </tr>
+                    <!-- question 2 -->
+                    <tr>
+                        <td>
+                            2) Sinyaller ve Sistemler dersinin vize sınavı nasıl geçti ?
+                            <br>
+                            <div style="margin:10px;">
+                                <input type="text" id="database_lesson_value">
+                            </div>
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_nothing_q_row_two">1
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_some_q_row_two">2
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_quite_q_row_two">3
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_very_q_row_two">4
+                        </td>
+                    </tr>
+                    <!-- question 3 -->
+                    <tr>
+                        <td>
+                            2) Sinyaller ve Sistemler dersinden geçtiniz mi ?
+                        </td>
+
+                        <td colspan="2" style="padding-left: 85px;">
+                            <input type="radio" name="q_row_three" id="selected_nothing_q_row_three">Evet
+                        </td>
+
+                        <td colspan="2" style="padding-left: 85px;">
+                            <input type="radio" name="q_row_three" id="selected_some_q_row_three">Hayır
+                        </td>
+                    </tr>
+                    <!-- question 3 -->
+                    <tr>
+                        <td>3) Evet ise , ders tekrarının faydası ne kadar oldu ? ?</td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_nothing_row_three">1
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_some_row_three">2
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_quite_row_three">3
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_very_row_three">4
+                        </td>
+                    </tr>
+
+
+                    <!-- 5. row Görsel Programlama -->
+                    <!-- question 1 -->
+                    <tr>
+                        <td>2) Görsel Programlama dersine ne kadar çalıştınız ?</td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_nothing_q_row_two">1
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_some_q_row_two">2
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_quite_q_row_two">3
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_very_q_row_two">4
+                        </td>
+                    </tr>
+                    <!-- question 2 -->
+                    <tr>
+                        <td>
+                            2) Görsel Programlama dersinin vize sınavı nasıl geçti ?
+                            <br>
+                            <div style="margin:10px;">
+                                <input type="text" id="database_lesson_value">
+                            </div>
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_nothing_q_row_two">1
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_some_q_row_two">2
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_quite_q_row_two">3
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_very_q_row_two">4
+                        </td>
+                    </tr>
+                    <!-- question 3 -->
+                    <tr>
+                        <td>
+                            2) Görsel Programlama dersinden geçtiniz mi ?
+                        </td>
+
+                        <td colspan="2" style="padding-left: 85px;">
+                            <input type="radio" name="q_row_three" id="selected_nothing_q_row_three">Evet
+                        </td>
+
+                        <td colspan="2" style="padding-left: 85px;">
+                            <input type="radio" name="q_row_three" id="selected_some_q_row_three">Hayır
+                        </td>
+                    </tr>
+                    <!-- question 3 -->
+                    <tr>
+                        <td>3) Evet ise , ders tekrarının faydası ne kadar oldu ? ?</td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_nothing_row_three">1
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_some_row_three">2
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_quite_row_three">3
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_very_row_three">4
+                        </td>
+                    </tr>
+
+
+                    <!-- 6. row Algoritma Analizi -->
+                    <!-- question 1 -->
+                    <tr>
+                        <td>2) Algoritma Analizi dersine ne kadar çalıştınız ?</td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_nothing_q_row_two">1
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_some_q_row_two">2
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_quite_q_row_two">3
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_very_q_row_two">4
+                        </td>
+                    </tr>
+                    <!-- question 2 -->
+                    <tr>
+                        <td>
+                            2) Algoritma Analizi dersinin vize sınavı nasıl geçti ?
+                            <br>
+                            <div style="margin:10px;">
+                                <input type="text" id="database_lesson_value">
+                            </div>
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_nothing_q_row_two">1
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_some_q_row_two">2
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_quite_q_row_two">3
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_very_q_row_two">4
+                        </td>
+                    </tr>
+                    <!-- question 3 -->
+                    <tr>
+                        <td>
+                            2) Algoritma Analizi dersinden geçtiniz mi ?
+                        </td>
+
+                        <td colspan="2" style="padding-left: 85px;">
+                            <input type="radio" name="q_row_three" id="selected_nothing_q_row_three">Evet
+                        </td>
+
+                        <td colspan="2" style="padding-left: 85px;">
+                            <input type="radio" name="q_row_three" id="selected_some_q_row_three">Hayır
+                        </td>
+                    </tr>
+                    <!-- question 3 -->
+                    <tr>
+                        <td>3) Evet ise , ders tekrarının faydası ne kadar oldu ? ?</td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_nothing_row_three">1
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_some_row_three">2
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_quite_row_three">3
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_very_row_three">4
+                        </td>
+                    </tr>
+
+
+                    <!-- 7. row İnternet Teknolojileri -->
+                    <!-- question 1 -->
+                    <tr>
+                        <td>2) İnternet Teknolojileri dersine ne kadar çalıştınız ?</td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_nothing_q_row_two">1
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_some_q_row_two">2
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_quite_q_row_two">3
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_very_q_row_two">4
+                        </td>
+                    </tr>
+                    <!-- question 2 -->
+                    <tr>
+                        <td>
+                            2) İnternet Teknolojileri dersinin vize sınavı nasıl geçti ?
+                            <br>
+                            <div style="margin:10px;">
+                                <input type="text" id="database_lesson_value">
+                            </div>
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_nothing_q_row_two">1
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_some_q_row_two">2
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_quite_q_row_two">3
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_very_q_row_two">4
+                        </td>
+                    </tr>
+                    <!-- question 3 -->
+                    <tr>
+                        <td>
+                            2) İnternet Teknolojileri dersinden geçtiniz mi ?
+                        </td>
+
+                        <td colspan="2" style="padding-left: 85px;">
+                            <input type="radio" name="q_row_three" id="selected_nothing_q_row_three">Evet
+                        </td>
+
+                        <td colspan="2" style="padding-left: 85px;">
+                            <input type="radio" name="q_row_three" id="selected_some_q_row_three">Hayır
+                        </td>
+                    </tr>
+                    <!-- question 3 -->
+                    <tr>
+                        <td>3) Evet ise , ders tekrarının faydası ne kadar oldu ? ?</td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_nothing_row_three">1
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_some_row_three">2
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_quite_row_three">3
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_very_row_three">4
+                        </td>
+                    </tr>
+
+
+                    <!-- 8. row İş Sağlığı ve Güvenliği - II -->
+                    <!-- question 1 -->
+                    <tr>
+                        <td>2) İş Sağlığı ve Güvenliği - II dersine ne kadar çalıştınız ?</td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_nothing_q_row_two">1
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_some_q_row_two">2
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_quite_q_row_two">3
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_very_q_row_two">4
+                        </td>
+                    </tr>
+                    <!-- question 2 -->
+                    <tr>
+                        <td>
+                            2) İş Sağlığı ve Güvenliği - II dersinin vize sınavı nasıl geçti ?
+                            <br>
+                            <div style="margin:10px;">
+                                <input type="text" id="database_lesson_value">
+                            </div>
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_nothing_q_row_two">1
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_some_q_row_two">2
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_quite_q_row_two">3
+                        </td>
+                        <td>
+                            <input type="radio" name="q_row_two" id="selected_very_q_row_two">4
+                        </td>
+                    </tr>
+                    <!-- question 3 -->
+                    <tr>
+                        <td>
+                            2) İş Sağlığı ve Güvenliği - II dersinden geçtiniz mi ?
+                        </td>
+
+                        <td colspan="2" style="padding-left: 85px;">
+                            <input type="radio" name="q_row_three" id="selected_nothing_q_row_three">Evet
+                        </td>
+
+                        <td colspan="2" style="padding-left: 85px;">
+                            <input type="radio" name="q_row_three" id="selected_some_q_row_three">Hayır
+                        </td>
+                    </tr>
+                    <!-- question 3 -->
+                    <tr>
+                        <td>3) Evet ise , ders tekrarının faydası ne kadar oldu ?</td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_nothing_row_three">1
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_some_row_three">2
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_quite_row_three">3
+                        </td>
+                        <td>
+                            <input type="radio" name="row_three" id="selected_very_row_three">4
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <button type="submit" style="margin-left: 930px; margin-top: 35px;  margin-bottom: 200px; width: 120px;height: 35px;">Kaydet</button>
+    </form>
+</body>
+
+</html>
