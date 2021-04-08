@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+        
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+        
+        .item1 {
+            grid-row: 1 / 4;
+        }
+    </style>
+
+    <img style="margin-left: 250px; margin-top: 50px;" src="logo1.png" alt="Sivas Cumhuriyet Üniversitesi Teknokent">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(94, 133, 148);">
+    <div style="margin: bottom 25px;margin-top: 25px; margin-left: 10px;margin-right: 150px;">
+
+        <div style="margin-top: auto; margin-left: 550px;">
+            <h1>MÜŞTERİ MEMNUNİYET ANKETİ</h1>
+        </div>
+
+        <div>
+            <div style="margin-left: 280px;margin-top: 80px;">
+                <h2>GENEL BİLGİLER</h2>
+            </div>
+
+            <form action="" method="post" enctype="multipart/form-data">
+                <div style="margin-left: 300px;margin-bottom: 20px;">
+                    <br><br>
+                    <label for="name">Adınız SoyAdınız* :</label><br>
+                    <input type="text" style="border-radius: 12px;" required name="name" id="name">
+
+                    <br><br>
+                    <label for="company_name">Çalıştığınız Kurum* :</label><br>
+                    <input type="text" style="border-radius: 12px;" required name="company_name" id="company_name">
+
+                    <br><br>
+                    <label for="departman_name">Departmanınız* :</label><br>
+                    <select name="departman_name" style="border-radius: 12px;" id="departman_name" style="width: 165px; height: 25px;">
+                        <option value="Sofftware Developer">Yazılım Geliştirici</option>
+                        <option value="Human Resources">İnsan Kaynakları</option>
+                        <option value="Project Manager">Proje Müdürü</option>
+                    </select>
+
+                    <br><br>
+                    <label for="phone">Enter a phone number* :</label><br>
+                    <input type="tel" style="border-radius: 12px;" id="phone" name="phone" placeholder="(505)-971-5895" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+
+                    <br><br>
+                    <label for="mail">Mail Adersiniz * :</label><br>
+                    <input type="email" style="border-radius: 12px;" required placeholder="root@root.com" name="mail" id="mail">
+                    <br><br>
+                </div>
+
+                <div style="margin-left: 400px;">
+                    <label>Lütfen aşağıdaki soruları memnuniyet derecesine göre değerlendiriniz.</label>
+                    <h4>(1 EN KÖTÜ, 5 EN İYİ DURUMU İFADE ETMEKTEDİR.)</h4>
+                    <h3> DESTEK HİZMET GENEL SORULARI</h3>
+                    <div id="bottom_table">
+                        <table>
+                            <!-- table headers-->
+                            <div style="margin: auto;">
+                                <tr>
+                                    <th>Sorular</th>
+                                    <th>Kötü</th>
+                                    <th>İyi</th>
+                                    <th>Güzel</th>
+                                    <th>Çok Güzel</th>
+                                </tr>
+                            </div>
+                            <!-- 1. row -->
+                            <tr>
+                                <td>1) Elemanlarımızdan Memun musnuz ?</td>
+                                <td>
+                                    <input type="radio" value="1" name="row_one" id="r1_q1">1
+                                </td>
+                                <td>
+                                    <input type="radio" value="2" name="row_one" id="r1_q2">2
+                                </td>
+                                <td>
+                                    <input type="radio" value="3" name="row_one" id="r1_q3">3
+                                </td>
+                                <td>
+                                    <input type="radio" value="4" name="row_one" id="r1_q4">4
+                                </td>
+                            </tr>
+
+                            <!-- 2. row -->
+                            <tr>
+                                <td>2) Elemanlarımızın Çalışma Saatlerinden Memun musnuz ?</td>
+                                <td>
+                                    <input type="radio" value="1" name="row_one" id="r2_q1">1
+                                </td>
+                                <td>
+                                    <input type="radio" value="2" name="row_one" id="r2_q2">2
+                                </td>
+                                <td>
+                                    <input type="radio" value="3" name="row_one" id="r2_q3">3
+                                </td>
+                                <td>
+                                    <input type="radio" value="4" name="row_one" id="r2_q4">4
+                                </td>
+                            </tr>
+
+                            <!-- 3. row -->
+                            <tr>
+                                <td>3) Elemanlarımızın Temizliğinden Memun musnuz ?</td>
+                                <td>
+                                    <input type="radio" value="1" name="row_one" id="r3_q1">1
+                                </td>
+                                <td>
+                                    <input type="radio" value="2" name="row_one" id="r3_q2">2
+                                </td>
+                                <td>
+                                    <input type="radio" value="3" name="row_one" id="r3_q3">3
+                                </td>
+                                <td>
+                                    <input type="radio" value="4" name="row_one" id="r3_q4">4
+                                </td>
+                            </tr>
+
+                            <!-- 4. row -->
+                            <tr>
+                                <td>4) Elemanlarımız Sosyal Mesafeye Uyuyor mu ?</td>
+                                <td>
+                                    <input type="radio" value="1" name="row_one" id="r4_q1">1
+                                </td>
+                                <td>
+                                    <input type="radio" value="2" name="row_one" id="r4_q2">2
+                                </td>
+                                <td>
+                                    <input type="radio" value="3" name="row_one" id="r4_q3">3
+                                </td>
+                                <td>
+                                    <input type="radio" value="4" name="row_one" id="r4_q4">4
+                                </td>
+                            </tr>
+
+                            <!-- 5. row -->
+                            <tr>
+                                <td>5) Elemanlarımızın Çalışma Düzeninden Memun musnuz ?</td>
+                                <td>
+                                    <input type="radio" value="1" name="row_one" id="r5_q1">1
+                                </td>
+                                <td>
+                                    <input type="radio" value="2" name="row_one" id="r5_q2">2
+                                </td>
+                                <td>
+                                    <input type="radio" value="3" name="row_one" id="r5_q3">3
+                                </td>
+                                <td>
+                                    <input type="radio" value="4" name="row_one" id="r5_q4">4
+                                </td>
+                            </tr>
+
+                            <!-- 6. row -->
+                            <tr>
+                                <td>6) Şirketimizden Memun musnuz ?</td>
+                                <td>
+                                    <input type="radio" value="1" name="row_one" id="r6_q1">1
+                                </td>
+                                <td>
+                                    <input type="radio" value="2" name="row_one" id="r6_q2">2
+                                </td>
+                                <td>
+                                    <input type="radio" value="3" name="row_one" id="r6_q3">3
+                                </td>
+                                <td>
+                                    <input type="radio" value="4" name="row_one" id="r6_q4">4
+                                </td>
+                            </tr>
+
+                            <!-- 7. row -->
+                            <tr>
+                                <td>7) Şirketimize Herhangi bir Hatada Muhattap Bulmada Zorluk Çekiyor musnuz ?</td>
+                                <td>
+                                    <input type="radio" value="1" name="row_one" id="r7_q1">1
+                                </td>
+                                <td>
+                                    <input type="radio" value="2" name="row_one" id="r7_q2">2
+                                </td>
+                                <td>
+                                    <input type="radio" value="3" name="row_one" id="r7_q3">3
+                                </td>
+                                <td>
+                                    <input type="radio" value="4" name="row_one" id="r7_q4">4
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <div style="margin: 20px;">
+                        <label for="mesaj" style="font-size: x-large; "> Mesaj</label><br>
+                        <textarea style="background-color: rgb(137, 166, 170);" rows="10" cols="75" name="mesaj" placeholder="Herhangi bir mesajınız varmı  bize...."></textarea>
+                    </div>
+
+                    <button type="submit" style="margin-left: 670px; margin-top: 35px; margin-bottom: 80px; width: 150px; height: 30px; border-radius: 12px;">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

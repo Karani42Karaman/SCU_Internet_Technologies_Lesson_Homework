@@ -1,0 +1,21 @@
+table {
+    font-family: arial;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 3px solid #000000;
+    text-align: left;
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#bottom_table {
+    margin-left: 20px;
+    margin-right: 160px;
+}
