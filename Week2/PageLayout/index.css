@@ -9,7 +9,7 @@ body {
 }
 
 
-/* Header/Blog Title */
+/* Header/Blog Başlığı */
 
 .header {
     padding: 30px;
@@ -42,18 +42,15 @@ body {
 }
 
 
-/* Change color on hover */
+/* Fareyle üzerine gelindiğinde rengi değiştir */
 
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: rgb(247, 154, 15);
     color: black;
 }
 
 
-/* Create two unequal columns that floats next to each other */
-
-
-/* Left column */
+/* Sol sütun */
 
 .leftcolumn {
     float: left;
@@ -61,7 +58,7 @@ body {
 }
 
 
-/* image */
+/* Resim */
 
 img {
     margin-left: 95px;
@@ -71,7 +68,7 @@ img {
 }
 
 
-/* Right column */
+/* sağ sütun */
 
 .rightcolumn {
     float: left;
@@ -80,6 +77,9 @@ img {
     padding-left: 20px;
 }
 
+
+/*p tagı  için gerekli*/
+
 p {
     font-style: oblique;
     text-align: center;
@@ -87,7 +87,16 @@ p {
 }
 
 
-/* Add a card effect for articles */
+/*html içinde yazdığım  metin için gerekli*/
+
+pre {
+    font-style: oblique;
+    padding-right: 290px;
+    font-size: 23px;
+}
+
+
+/* Makaleler için bir kart efekti ekler */
 
 .card {
     background-color: white;
@@ -96,41 +105,11 @@ p {
 }
 
 
-/* Clear floats after the columns */
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/* Footer */
+/* Footer için yazıldı. */
 
 .footer {
     padding: 20px;
     text-align: center;
     background: #ddd;
     margin-top: 20px;
-}
-
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-
-@media screen and (max-width: 800px) {
-    .leftcolumn,
-    .rightcolumn {
-        width: 100%;
-        padding: 0;
-    }
-}
-
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-
-@media screen and (max-width: 400px) {
-    .topnav a {
-        float: none;
-        width: 100%;
-    }
 }
