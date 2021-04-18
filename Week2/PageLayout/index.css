@@ -22,7 +22,7 @@ body {
 }
 
 
-/* Style the top navigation bar */
+/* Üst gezinme çubuğunun stilini belirledim */
 
 .topnav {
     overflow: hidden;
@@ -30,7 +30,7 @@ body {
 }
 
 
-/* Style the topnav links */
+/* Üst gezinme bağlantılarının stilini belirledim */
 
 .topnav a {
     float: left;
@@ -61,7 +61,7 @@ body {
 /* Resim */
 
 img {
-    margin-left: 95px;
+    margin-left: 135px;
     width: 190px;
     height: 190px;
     border-radius: 90px;
