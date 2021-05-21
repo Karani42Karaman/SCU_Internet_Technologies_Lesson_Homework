@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Products CRUD</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .wrapper {
+            position: relative;
+            text-align: center;
+            display: inline-block;
+            position: absolute;
+            top: 40%;
+            left: 37%;
+        }
+        
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        
+        .bg {
+            background-image: url("odev5.jpg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="wrapper">
+            <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+                <input style="width: 250px; height: 30px;border-radius: 12px;" type="text" id="add-name" placeholder="New Product">
+                <input style="width: 100px; height: 25px; border-radius: 50px; background-color: rgb(217, 227, 233);" type="submit" value="Add">
+            </form>
+            <table>
+                <tbody id="products">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="">
+        <div class="wrapper" style="left: 940px; top: 304px;">
+            <form onsubmit="ClearAll()">
+                <input style="width: 100px; height: 25px; border-radius: 50px;  background-color: rgb(199, 186, 146); " type="submit" value="ClearAll">
+            </form>
+        </div>
+    </div>
+    <script>
+        var app = new function() {
+            this.el = document.getElementById('products');
+            this.products = [];
+            // Listeyi Tablo Halinde Gösterir
+            this.FetchAll = function() {
+                var data = '';
+                if (this.products.length > 0) {
+                    for (i = 0; i < this.products.length; i++) {
+                        data += '<tr>';
+                        data += '<td style="width: 250px;" >' + this.products[i] + '</td>';
+                        data += '<td><button style="width: 100px; height: 25px; border-radius: 50px;" onclick="app.Delete(' + i + ')">Delete</button></td>';
+                        data += '</tr>';
+                    }
+                }
+                return this.el.innerHTML = data;
+            };
+
+            this.Add = function() {
+                el = document.getElementById('add-name');
+                var variable = el.value;
+                // listeye veri ekler 
+                this.products.push(variable.trim());
+                // Reset input value
+                el.value = '';
+                // yeni eklenen veriyi döner ekrana
+                this.FetchAll();
+            };
+
+            this.Delete = function(item) {
+                this.products.splice(item, 1);
+                this.FetchAll();
+            };
+
+        }
+
+        function ClearAll() {
+            app.products.splice(0, app.products.length);
+            app.FetchAll();
+        }
+    </script>
+</body>
+
+</html>
